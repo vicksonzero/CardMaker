@@ -16,3 +16,11 @@ label{
     text-decoration: underline;
     color: blue;
 }
+
+.button-load-example{
+    display: none;
+}
+
+.input-meta{
+    display: none;
+}
