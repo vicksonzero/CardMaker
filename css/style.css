@@ -1,10 +1,10 @@
 table.page{
     border-collapse: collapse;
-    border: solid gray 1px;
+    border: solid #999999 1px;
 }
 
 .page td{
-    border: solid gray 1px;
+    border: solid #999999 1px;
 }
 
 label{
@@ -22,5 +22,5 @@ label{
 }
 
 .input-meta{
-    display: none;
+    /*display: none;*/
 }

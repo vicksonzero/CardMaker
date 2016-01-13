@@ -115,5 +115,5 @@
 <circle fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" cx="23" cy="23.833008" r="16.5"/>
 <text transform="matrix(1 0 0 1 10.674316 26.333008)"  text-anchor="middle" font-family="'MyriadPro-Regular'" font-size="12">10</text>
 <text transform="matrix(1 0 0 1 22 103.333008)" font-family="'MyriadPro-Regular'" font-size="20">Marine</text>
-<text transform="matrix(1 0 0 1 22 114.333008)" font-family="'MyriadPro-Regular'" font-size="9">10/10 infantry. <br />ground/light<br />attacks ground and air</text>
+<text transform="matrix(1 0 0 1 22 114.333008)" font-family="'MyriadPro-Regular'" font-size="9">10/10 infantry. \nground/light<br />attacks ground and air</text>
 </svg>

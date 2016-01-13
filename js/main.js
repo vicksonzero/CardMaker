@@ -1,12 +1,16 @@
 // include
 var $ = require('jquery');
 var csvParser = require("csv").parse;
+var Storage = require("./StorageLocalStorage");
+var storage = new Storage();
 
 // global variable
 var template_xml = null;
 var dataSheet = null;
 
-var $inputRepeatHori, $inputRepeatVert, $previewArea;
+var $inputRepeatHori, $inputRepeatVert;
+var $inputTitle, $inputVersion, $inputBy;
+var $previewArea;
 
 // dom operations
 
@@ -18,7 +22,15 @@ $(function main() {
 
 	$inputRepeatHori = $("#input-repeat-hori");
 	$inputRepeatVert = $("#input-repeat-vert");
+
+	$inputTitle = $("#input-title");
+	$inputVersion = $("#input-version");
+	$inputBy = $("#input-by");
+
 	$previewArea = $("#preview-template-file");
+
+	// also initializes to default value
+	loadSettingFromStorage();
 });
 
 
@@ -99,7 +111,7 @@ function onDatasheetChosen(){
 
 
 function onGenerateClicked(){
-
+	// validation
 	if(template_xml === null || dataSheet === null){
 		console.log("template_xml and dataSheet should not be null");
 
@@ -107,12 +119,22 @@ function onGenerateClicked(){
 
 		return;
 	}
-
+	// get value
 	var xx = $inputRepeatHori.val();
 	var yy = $inputRepeatVert.val();
+	var title = $inputTitle.val();
+	var version = $inputVersion.val();
+	var by = $inputBy.val();
+
 	var $result = generateCardSheet(dataSheet, xx, yy);
 	console.log($result);
+	$(".sheet-version").html(title+" v"+version+" by "+by);
 	$previewArea.html("").append($result);
+
+
+
+
+	saveSettingToStorage();
 }
 
 
@@ -155,4 +177,45 @@ function generateCardSheet(pDatasheet, pRepeatX, pRepeatY) {
 		$result.append($row);
 	}
 	return $result;
+}
+
+
+function saveSettingToStorage() {
+
+	var xx = $inputRepeatHori.val();
+	var yy = $inputRepeatVert.val();
+	storage
+		.write("repeatX",xx)
+		.write("repeatY",yy);
+
+	var title = $inputTitle.val();
+	var version = $inputVersion.val();
+	var by = $inputBy.val();
+
+	storage
+		.write("title",title)
+		.write("version",version)
+		.write("by",by);
+}
+
+function loadSettingFromStorage() {
+
+	var xx = storage.read("repeatX") || 3;
+	var yy = storage.read("repeatY") || 4;
+	var title = storage.read("title") || "Cardgame";
+	var version = storage.read("version") || "0.0.1";
+	var by = storage.read("by") || "no-name";
+
+	console.log(xx);
+	console.log(yy);
+	console.log(title);
+	console.log(version);
+	console.log(by);
+
+	$inputRepeatHori.val(xx);
+	$inputRepeatVert.val(yy);
+	$inputTitle.val(title);
+	$inputVersion.val(version);
+	$inputBy.val(by);
+
 }
