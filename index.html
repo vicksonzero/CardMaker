@@ -17,14 +17,22 @@
 			<label for="input-datasheet-file" >Data file: </label>
 			<input id="input-datasheet-file" type="file" accept=".csv">
 		</p>
+		<p>
+			<input id="input-repeat-hori" type="number" name="repeat-hori" value="3">
+			x
+			<input id="input-repeat-vert" type="number" name="repeat-vert" value="4">
+			 per page
+		</p>
 		<p >
-			<input type="button" value="generate" style="font-size:20px;"/>
+			<input id="button-generate" type="button" value="generate" style="font-size:20px;"/>
 		</p>
 	</form>
 	<hr />
 	<p>
 		<h2>Preview</h2>
-		<img id="preview-template-file" src="" alt="" />
+		<div id="preview-template-file" class="">
+
+		</div>
 	</p>
 
 </body>
