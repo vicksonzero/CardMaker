@@ -1,0 +1,18 @@
+table.page{
+    border-collapse: collapse;
+    border: solid gray 1px;
+}
+
+.page td{
+    border: solid gray 1px;
+}
+
+label{
+    width:100px;
+    display:inline-block;
+}
+
+.fake-link{
+    text-decoration: underline;
+    color: blue;
+}

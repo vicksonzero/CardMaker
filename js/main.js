@@ -112,12 +112,12 @@ function onGenerateClicked(){
 	var yy = $inputRepeatVert.val();
 	var $result = generateCardSheet(dataSheet, xx, yy);
 	console.log($result);
-	$previewArea.append($result);
+	$previewArea.html("").append($result);
 }
 
 
 function generateCardSheet(pDatasheet, pRepeatX, pRepeatY) {
-	var $result = $("<table></table>");
+	var $result = $("<table></table>").addClass("page");
 	var cardID = 0;
 	var pDatasheetlen = pDatasheet.length;
 	for(var i=0; i < pRepeatY; i++){

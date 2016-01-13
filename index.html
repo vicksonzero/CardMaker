@@ -2,20 +2,32 @@
 <head>
 	<title></title>
 	<script src="./js/bundle.js" type="text/javascript" charset="utf-8" async defer></script>
+	<link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="css/print.css" media="print" charset="utf-8">
 
 </head>
 <body>
 
-	<h1>Card Maker</h1>
-	<form>
+	<h1 class="ui">Card Maker</h1>
+	<form class="ui">
 		<h2>Select files</h2>
+		<p>
+			<label for="input-title">Title:</label>
+			<input type="text" name="input-title" value=""><br/>
+			<label for="input-version">Version:</label>
+			<input type="text" name="input-version" value=""><br/>
+			<label for="input-by">By:</label>
+			<input type="text" name="input-by" value="">
+		</p>
 		<p>
 			<label for="input-template-file" >Template file: </label>
 			<input id="input-template-file" type="file" accept=".svg">
+			<span id="button-example-template" class="fake-link">(use example)</span>
 		</p>
 		<p>
 			<label for="input-datasheet-file" >Data file: </label>
 			<input id="input-datasheet-file" type="file" accept=".csv">
+			<span id="button-example-data" class="fake-link">(use example)</span>
 		</p>
 		<p>
 			<input id="input-repeat-hori" type="number" name="repeat-hori" value="3">
@@ -27,9 +39,10 @@
 			<input id="button-generate" type="button" value="generate" style="font-size:20px;"/>
 		</p>
 	</form>
-	<hr />
+	<hr class="ui"/>
 	<p>
-		<h2>Preview</h2>
+		<h2 class="ui">Preview</h2>
+		<span class="sheet-version"></span>
 		<div id="preview-template-file" class="">
 
 		</div>

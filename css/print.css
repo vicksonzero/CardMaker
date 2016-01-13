@@ -1,0 +1,12 @@
+.ui{
+    display:none;
+}
+
+table.page{
+    border-collapse: collapse;
+    border: solid gray 1px;
+}
+
+.page td{
+    border: solid gray 1px;
+}
