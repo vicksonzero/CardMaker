@@ -63,6 +63,11 @@ Example file:
 5. Adjust `row` and `column` if some cards do not appear
 6. Press `Print` or `Ctrl+P` to print. You can choose to print to pdf
 
+## 1.3. Finishing
+
+You can print the cards on cardboards. 
+If you choosebto print them on A4 paper, you can slide them into other cards with clear sleeves as a support. This way you can prototype the game as quickly as possible
+
 # 2. Build
 
     $ npm install -g gulp
@@ -70,3 +75,17 @@ Example file:
 	$ gulp
 
 This project uses `browserify`. Write in nodejs style and `js/bundle.js` is created automatically to contain all files
+
+
+# 3. TODO
+
+    [x] localStorage version
+    [ ] increment version and create
+    [x] example data
+    [ ] preview data
+    [ ] Exact match
+    [ ] Attach picture
+    [ ] pagination
+    [ ] change color
+    [ ] don't use gray line use crop mark
+    [ ] add version number to every card
