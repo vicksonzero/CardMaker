@@ -1,26 +1,30 @@
 module.exports = (function () {
 
 	function Storage() {
-		this.haveLocalStorage = localStorageTest();
+		this.haveLocalStorage = storageTest();
 
 	}
 
 	var p = Storage.prototype;
 
 	p.write = function write(key, val) {
-		// body...
+		// nothing
+		return this;
+	};
+
+	p.read = function read(key) {
+		return "";
+	};
+
+	p.remove = function remove(key) {
+		// nothing
+		return this;
 	};
 
 
-	function localStorageTest(){
-		var test = 'test';
-		try {
-			localStorage.setItem(test, test);
-			localStorage.removeItem(test);
-			return true;
-		} catch(e) {
-			return false;
-		}
+	p.storageTest = storageTest;
+	function storageTest(){
+		return true;
 	}
 
 	return Storage;
