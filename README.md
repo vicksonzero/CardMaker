@@ -91,3 +91,7 @@ This project uses `browserify`. Write in nodejs style and `js/bundle.js` is crea
     [ ] change color
     [ ] don't use gray line use crop mark
     [ ] add version number to every card
+
+# License
+
+MIT
