@@ -2,6 +2,10 @@
   "name": "card-maker",
   "version": "1.0.0",
   "description": "print-to-play card sheet generator from excel datasheet",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/vicksonzero/CardMaker.git"
+  },
   "main": "app.js",
   "scripts": {
     "test": "node testrunner.js"
