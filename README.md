@@ -26,6 +26,11 @@ Example file:
     <text transform="matrix(1 0 0 1 22.000244 114.333008)" font-size="9">#description</text>
     </svg>
 
+NOTE:
+
+1. text labels to be replaced are `#cost`, `#name` and `#description`
+2. some svg files may not support text alignment to center or right. you may add `text-anchor="middle"` manually to fix it
+
 ### Card list
 
 Create a **Comma separated value**(`csv`) file with the first rows valued `#whatever`
@@ -53,7 +58,8 @@ Example file:
 2. Fill in `Title`, `Version`, `Author`, `row`, `column`
 3. Choose `Template file` and `Data file`
 4. Press `Generate`
-
+5. Adjust `row` and `column` if some cards do not appear
+6. Press `Print` or `Ctrl+P` to print. You can choose to print to pdf
 
 # 2. Build
 
