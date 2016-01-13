@@ -1,5 +1,7 @@
 # Card Maker
 
+app link: http://vicksonzero.github.io/CardMaker/
+
 Generates **print-to-play** card sheet from `svg` templates and `csv` data sheets. useful for prototyping and crude production
 
 # 1. How to use
@@ -79,6 +81,7 @@ This project uses `browserify`. Write in nodejs style and `js/bundle.js` is crea
 
 # 3. Features
 
+    [x] Stand alone app. no servers needed
     [x] load input files from computer
     [x] clean printable version
     [x] localStorage version number and creater details
