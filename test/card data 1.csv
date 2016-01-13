@@ -1,4 +1,4 @@
-cost,name,description
+#cost,#name,#description
 10,aadad,ajdiljjd
 20,basdasd,sadhjl dwjd
 30,casdsd,ajdiljjdjvjeif
@@ -9,6 +9,6 @@ cost,name,description
 80,hasdad,oiiksa
 90,iada,lciwjald
 100,jsadsad,cjsawj
-110,kasda,wiuas;ld
-120,lasdsad,apfcefj
-130,masadsa,qodlka
+110,kasda,wiuasld
+120,lasdsad,"content, with, comma"
+130,masadsa,"content ""with"" quotes"
