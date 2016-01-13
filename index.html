@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title></title>
+	<script src="./js/bundle.js" type="text/javascript" charset="utf-8" async defer></script>
+
+</head>
+<body>
+
+	<h1>Card Maker</h1>
+	<form>
+		<h2>Select files</h2>
+		<p>
+			<label for="input-template-file" >Template file: </label>
+			<input id="input-template-file" type="file" accept=".svg">
+		</p>
+		<p>
+			<label for="input-data-file" >Data file: </label>
+			<input id="input-data-file" type="file" accept=".csv">
+		</p>
+		<p >
+			<input type="button" value="generate" style="font-size:20px;"/>
+		</p>
+	</form>
+	<hr />
+	<p>
+		<h2>Preview</h2>
+		<img id="preview-template-file" src="" alt="" />
+	</p>
+
+</body>
+</html>
