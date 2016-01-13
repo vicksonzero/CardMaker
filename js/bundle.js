@@ -181,16 +181,6 @@ function onDatasheetChosen(){
 	}
 }
 
-// function parseCSV(string) {
-// 	var result = [];
-//
-// 	dataSheet_string.split("\n").forEach(function(element, index, array){
-// 		var line = element.split(",")
-// 	});
-//
-// 	return result;
-// }
-
 
 function onGenerateClicked(){
 	// validation
@@ -306,7 +296,7 @@ function loadSettingFromStorage() {
 function onTemplateExample(){
 	//console.log(this.files);
 
-	template_xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n	 width=\"149.054688px\" height=\"209.837891px\" viewBox=\"-0.000244 0 149.054688 209.837891\"\n	 enable-background=\"new -0.000244 0 149.054688 209.837891\" xml:space=\"preserve\">\n\n\n	<rect x=\"12.499756\" y=\"14.833008\" fill=\"#FFFFFF\" stroke=\"#000000\" stroke-miterlimit=\"10\" width=\"128\" height=\"186.5\"/>\n<circle fill=\"#FFFFFF\" stroke=\"#000000\" stroke-miterlimit=\"10\" cx=\"22.999756\" cy=\"23.833008\" r=\"16.5\"/>\n<text transform=\"matrix(1 0 0 1 22.999756 26.333008)\" text-anchor=\"middle\" font-family=\"'MyriadPro-Regular'\" font-size=\"12\">#cost</text>\n<text transform=\"matrix(1 0 0 1 22.000244 103.333008)\" font-family=\"'MyriadPro-Regular'\" font-size=\"20\">#name</text>\n<text transform=\"matrix(1 0 0 1 22.000244 114.333008)\" font-family=\"'MyriadPro-Regular'\" font-size=\"9\">#description</text>\n</svg>";
+	template_xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n	 width=\"149.054688px\" height=\"209.837891px\" viewBox=\"-0.000244 0 149.054688 209.837891\"\n	 enable-background=\"new -0.000244 0 149.054688 209.837891\" xml:space=\"preserve\">\n\n\n	<rect x=\"12.499756\" y=\"14.833008\" fill=\"#FFFFFF\" stroke=\"#000000\" stroke-miterlimit=\"10\" width=\"128\" height=\"186.5\"/>\n<circle fill=\"#FFFFFF\" stroke=\"#000000\" stroke-miterlimit=\"10\" cx=\"22.999756\" cy=\"23.833008\" r=\"16.5\"/>\n<text transform=\"matrix(1 0 0 1 22.999756 26.333008)\" text-anchor=\"middle\" font-size=\"12\">#cost</text>\n<text transform=\"matrix(1 0 0 1 22.000244 103.333008)\" font-size=\"20\">#name</text>\n<text transform=\"matrix(1 0 0 1 22.000244 114.333008)\" font-size=\"9\">#description</text>\n</svg>";
 	$("#preview-template-file")
 		.html(template_xml)
 		.find(":first-child")
@@ -318,7 +308,7 @@ function onTemplateExample(){
 
 function onDatasheetExample(){
 	//console.log(this.files);
-	var dataSheet_string = "cost,name,description\n10,aadad,ajdiljjd\n20,basdasd,sadhjl dwjd\n30,casdsd,ajdiljjdjvjeif\n40,dfad,adjlw\n50,eafad,jvjeif\n60,fawdad,pqjjfjef\n70,gadasd,cjudae\n80,hasdad,oiiksa\n90,iada,lciwjald\n100,jsadsad,cjsawj\n110,kasda,wiuas;ld\n120,lasdsad,apfcefj\n130,masadsa,qodlka\n";
+	var dataSheet_string = "#cost,#name,#description\n10,aadad,ajdiljjd\n20,basdasd,sadhjl dwjd\n30,casdsd,ajdiljjdjvjeif\n40,dfad,adjlw\n50,eafad,jvjeif\n60,fawdad,pqjjfjef\n70,gadasd,cjudae\n80,hasdad,oiiksa\n90,iada,lciwjald\n100,jsadsad,cjsawj\n110,kasda,wiuas;ld\n120,lasdsad,apfcefj\n130,masadsa,qodlka\n";
 	var result = csvParser(dataSheet_string, {columns:true}, function(err, output){
 		if(err){
 			console.log(err);

@@ -2,13 +2,63 @@
 
 Generates **print-to-play** card sheet from `svg` templates and `csv` data sheets. useful for prototyping and crude production
 
-# How to use
+# 1. How to use
 
-Open `index.html`
+## 1.1. Prepare input data
+
+### Template
+
+Create a **Scalable Vector Graphics**(`svg`) file with replacable content marked `#whatever`
+
+Example file:
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    	 width="149.054688px" height="209.837891px" viewBox="-0.000244 0 149.054688 209.837891"
+    	 enable-background="new -0.000244 0 149.054688 209.837891" xml:space="preserve">
 
 
-# Build
+    	<rect x="12.499756" y="14.833008" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" width="128" height="186.5"/>
+    <circle fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" cx="22.999756" cy="23.833008" r="16.5"/>
+    <text transform="matrix(1 0 0 1 22.999756 26.333008)" text-anchor="middle" font-size="12">#cost</text>
+    <text transform="matrix(1 0 0 1 22.000244 103.333008)" font-size="20">#name</text>
+    <text transform="matrix(1 0 0 1 22.000244 114.333008)" font-size="9">#description</text>
+    </svg>
+
+### Card list
+
+Create a **Comma separated value**(`csv`) file with the first rows valued `#whatever`
+
+Example file:
+
+    #cost,#name,#description
+    10,aadad,ajdiljjd
+    20,basdasd,sadhjl dwjd
+    30,casdsd,ajdiljjdjvjeif
+    40,dfad,adjlw
+    50,eafad,jvjeif
+    60,fawdad,pqjjfjef
+    70,gadasd,cjudae
+    80,hasdad,oiiksa
+    90,iada,lciwjald
+    100,jsadsad,cjsawj
+    110,kasda,wiuasld
+    120,lasdsad,"content, with, comma"
+    130,masadsa,"content ""with"" quotes"
+
+## 1.2. Put them together
+
+1. Open `index.html`
+2. Fill in `Title`, `Version`, `Author`, `row`, `column`
+3. Choose `Template file` and `Data file`
+4. Press `Generate`
+
+
+# 2. Build
 
     $ npm install -g gulp
 	$ npm install
 	$ gulp
+
+This project uses `browserify`. Write in nodejs style and `js/bundle.js` is created automatically to contain all files

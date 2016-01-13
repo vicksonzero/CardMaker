@@ -18,9 +18,13 @@ label{
 }
 
 .button-load-example{
-    
+
 }
 
 .input-meta{
     /*display: none;*/
+}
+
+.app-credit{
+    color: gray;
 }

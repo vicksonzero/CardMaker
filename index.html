@@ -1,7 +1,8 @@
 <html>
 <head>
-	<title></title>
+	<title>Card Maker</title>
 	<script src="./js/bundle.js" type="text/javascript" charset="utf-8" async defer></script>
+	<link rel="stylesheet" href="css/clearfix.css"  charset="utf-8">
 	<link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
 	<link rel="stylesheet" href="css/print.css" media="print" charset="utf-8">
 
@@ -36,13 +37,20 @@
 			 per page
 		</p>
 		<p >
-			<input id="button-generate" type="button" value="generate" style="font-size:20px;"/>
+			<input id="button-generate" type="button" value="Generate" style="font-size:20px;"/>
 		</p>
 	</form>
+
 	<hr class="ui"/>
 	<p>
 		<h2 class="ui">Preview</h2>
-		<span class="sheet-version"></span>
+		<div class="clearfix" style="width:100%;">
+			<div class="sheet-version" style="float:left;"></div>
+			<div class="ui app-credit" style="float:right;">
+				Card Maker v1.1 by Dickson (<a href="https://github.com/vicksonzero">vicksonzero</a>), <a href="https://github.com/vicksonzero/CardMaker">fork me on Github</a>
+			</div>
+		</div>
+
 		<div id="preview-template-file" class="">
 
 		</div>

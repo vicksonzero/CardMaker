@@ -10,3 +10,7 @@ table.page{
 .page td{
     border: solid gray 1px;
 }
+
+.app-credit{
+    color: gray;
+}
