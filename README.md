@@ -77,9 +77,11 @@ If you choosebto print them on A4 paper, you can slide them into other cards wit
 This project uses `browserify`. Write in nodejs style and `js/bundle.js` is created automatically to contain all files
 
 
-# 3. TODO
+# 3. Features
 
-    [x] localStorage version
+    [x] load input files from computer
+    [x] clean printable version
+    [x] localStorage version number and creater details
     [ ] increment version and create
     [x] example data
     [ ] preview data
