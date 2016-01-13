@@ -8,7 +8,7 @@ Generates **print-to-play** card sheet from `svg` templates and `csv` data sheet
 
 ### Template
 
-Create a **Scalable Vector Graphics**(`svg`) file with replacable content marked `#whatever`
+Create a **Scalable Vector Graphics**(`svg`) file with replacable content marked `#keywordHere`
 
 Example file:
 
@@ -34,6 +34,8 @@ NOTE:
 ### Card list
 
 Create a **Comma separated value**(`csv`) file with the first rows valued `#whatever`
+
+You can use major spreadsheet applications like excel to fill in the data and then save as `.csv`
 
 Example file:
 
